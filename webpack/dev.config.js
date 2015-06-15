@@ -3,6 +3,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import {isArray} from 'lodash';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 import writeStats from './utils/write-stats';
 import startKoa from './utils/start-koa';
@@ -72,7 +73,11 @@ export default {
         {
           test: /\.scss$/,
           loader: 'style!css?sourceMap!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap'
-        }
+        },
+        {
+          test: /\.css$/,
+          loader: ExtractTextPlugin.extract("css-loader")
+        },
       ]
     },
     plugins: [
@@ -91,6 +96,8 @@ export default {
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.OccurenceOrderPlugin(),
 
+      new ExtractTextPlugin('[name]' + '.css'),
+
       function () {
         this.plugin('done', writeStats);
       },
@@ -98,7 +105,6 @@ export default {
       function () {
         this.plugin('done', startKoa);
       }
-
     ],
     resolve: {
       extensions: ['', '.js', '.json', '.jsx'],

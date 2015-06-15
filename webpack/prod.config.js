@@ -54,7 +54,11 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 2 version!sass')
-      }
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract("css-loader")
+      },
     ]
   },
   plugins: [
@@ -96,6 +100,8 @@ module.exports = {
         comments: false
       }
     }),
+
+    new ExtractTextPlugin('[name]-[chunkhash]' + '.css'),
 
     // write webpack stats
     function () {

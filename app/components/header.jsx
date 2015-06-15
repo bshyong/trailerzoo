@@ -35,7 +35,7 @@ export default class Header extends React.Component {
           store={this.props.flux.getStore('locale')}
           actions={this.props.flux.getActions('locale')} />
         <Link to='app' className='app--logo'>
-          <img src={reactLogo} alt='react-logo' />
+          <img src={reactLogo} alt='react-logo' style={{height: 24}} />
         </Link>
         <ul className='app--navbar un-select'>
           <li>
