@@ -1,0 +1,1 @@
+// simplified chinese translation strings
