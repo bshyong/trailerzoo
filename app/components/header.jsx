@@ -28,33 +28,19 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <header className='app--header'>
-        <Spinner store={this.props.flux.getStore('requests')} />
-        <LangPicker
-          store={this.props.flux.getStore('locale')}
-          actions={this.props.flux.getActions('locale')} />
-        <Link to='app' className='app--logo'>
-          <img src={reactLogo} alt='react-logo' style={{height: 24}} />
-        </Link>
-        <ul className='app--navbar un-select'>
-          <li>
-            <Link to='app'>
-              {this._getIntlMessage('header.users')}
-            </Link>
-          </li>
-          <li>
-            <Link to='guides'>
-              {this._getIntlMessage('header.guides')}
-            </Link>
-          </li>
-          <li>
-            <Link to='protected'>
-              {this._getIntlMessage('header.protected')}
-            </Link>
-          </li>
-        </ul>
-        <hr />
-      </header>
+      <div className="flex flex-center border-bottom">
+        <div className="flex-auto">
+          <Link to="home" className="button py2 button-transparent">
+            TrailerZoo
+          </Link>
+        </div>
+        <div>
+          <form>
+            <input id="search" type="text" className="field-light" />
+            <button className="button">Search</button>
+          </form>
+        </div>
+      </div>
     );
   }
 }

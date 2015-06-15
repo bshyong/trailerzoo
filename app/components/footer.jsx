@@ -5,7 +5,7 @@ import React from 'react';
 export default class Footer extends React.Component {
   render() {
     return (
-      <footer>
+      <footer className="border-top p2">
         <div className='h5 gray'>
           TrailerZoo {new Date().getFullYear()}
         </div>
