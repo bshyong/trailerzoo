@@ -18,7 +18,7 @@ export default class App extends React.Component {
 
   state = this.props.flux
     .getStore('locale')
-    .getState();
+    .getState()
 
   componentDidMount() {
     this.props.flux
