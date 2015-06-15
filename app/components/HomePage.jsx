@@ -65,6 +65,9 @@ export default class HomePage extends React.Component {
           <h4>{trailer.title}</h4>
           <img src={trailer.thumbnailUrl} alt={trailer.title} />
           <p>
+            <a href={trailer.videoUrl}>{trailer.videoUrl}</a>
+          </p>
+          <p>
             {trailer.publishedAt}
           </p>
         </div>
