@@ -1,6 +1,7 @@
 export default {
   messages: {
     header: {
+      protected: 'Protected page',
       users: 'Utilisateurs',
       guides: 'Guides'
     },
