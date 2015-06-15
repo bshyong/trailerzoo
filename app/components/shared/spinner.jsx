@@ -4,10 +4,6 @@ import React from 'react';
 import classNames from 'classnames';
 import ListenerMixin from 'alt/mixins/ListenerMixin';
 
-if (process.env.BROWSER) {
-  require('styles/spinner.scss');
-}
-
 export default class Spinner extends React.Component {
   static propTypes = {
     store: React.PropTypes.object.isRequired

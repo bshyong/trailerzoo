@@ -4,10 +4,6 @@ import React from 'react';
 import ListenerMixin from 'alt/mixins/ListenerMixin';
 import {IntlMixin} from 'react-intl';
 
-if (process.env.BROWSER) {
-  require('styles/HomePage.scss');
-}
-
 export default class HomePage extends React.Component {
   static contextTypes = {
     router: React.PropTypes.func

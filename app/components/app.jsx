@@ -52,7 +52,7 @@ export default class App extends React.Component {
   render() {
     const props: Object = assign({}, this.state, this.props);
     return (
-      <div>
+      <div className="container p2">
         <Header {...props} />
         <RouteHandler {...props} />
         <Footer />

@@ -7,10 +7,10 @@ import {Route, DefaultRoute, NotFoundRoute} from 'react-router';
 
 export default (
   <Route name='app' path='/' handler={require('./components/app')}>
-    <Route
+    <DefaultRoute
       name='home'
       handler={require('./components/HomePage')} />
-    <DefaultRoute
+    <Route
       name='users'
       handler={require('./components/users')} />
     <Route

@@ -5,10 +5,6 @@ import ListenerMixin from 'alt/mixins/ListenerMixin';
 import {IntlMixin} from 'react-intl';
 import {capitalize, assign} from 'lodash';
 
-if (process.env.BROWSER) {
-  require('styles/profile.scss');
-}
-
 export default class Profile extends React.Component {
   static propTypes = {
     flux: React.PropTypes.object.isRequired

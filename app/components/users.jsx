@@ -4,10 +4,6 @@ import React from 'react';
 import ListenerMixin from 'alt/mixins/ListenerMixin';
 import {IntlMixin} from 'react-intl';
 
-if (process.env.BROWSER) {
-  require('styles/users.scss');
-}
-
 export default class Users extends React.Component {
   static contextTypes = {
     router: React.PropTypes.func
