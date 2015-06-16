@@ -3,16 +3,16 @@
 /* jscs:disable requireCamelCaseOrUpperCaseIdentifiers */
 /* eslint camelcase: 0 */
 
-require('babel/register');
+// require('babel/register');
 
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var writeStats = require('./utils/write-stats');
+// var writeStats = require('./utils/write-stats');
 
 // clean `.tmp` && `dist`
-require('./utils/clean-dist')();
+// require('./utils/clean-dist')();
 
 module.exports = {
   devtool: 'source-map',
@@ -104,9 +104,9 @@ module.exports = {
     new ExtractTextPlugin('[name]-[chunkhash]' + '.css'),
 
     // write webpack stats
-    function () {
-      this.plugin('done', writeStats);
-    }
+    // function () {
+    //   this.plugin('done', writeStats);
+    // }
 
   ],
   resolve: {

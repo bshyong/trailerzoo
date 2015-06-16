@@ -8,17 +8,6 @@ import imageResolver from 'utils/image-resolver';
 import Spinner from 'components/shared/spinner';
 import LangPicker from 'components/shared/lang-picker';
 
-// Load styles for the header
-// and load the `react-logo.png` image
-// for the `<img src='' />` element
-let reactLogo;
-if (process.env.BROWSER) {
-  reactLogo = require('images/react-logo.png');
-}
-else {
-  reactLogo = imageResolver('images/react-logo.png');
-}
-
 export default class Header extends React.Component {
   static propTypes: {
     flux: React.PropTypes.object.isRequired
