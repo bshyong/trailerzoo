@@ -63,7 +63,7 @@ export default class HomePage extends React.Component {
       return (
         <div className="center" key={trailer.id}>
           <h4>{trailer.title}</h4>
-          <img src={trailer.thumbnailUrl} alt={trailer.title} />
+          <img src={trailer.thumbnailUrl} alt={trailer.title} style={{minWidth: '20vw'}}/>
           <p>
             <a href={trailer.videoUrl}>{trailer.videoUrl}</a>
           </p>
