@@ -1,7 +1,6 @@
 deployment:
   production:
     branch: master
-    heroku:
-      appname: trailer
     commands:
+      - git push git@heroku.com:trailerzoo.git $CIRCLE_SHA1:master
       - node ./post-deploy.js
