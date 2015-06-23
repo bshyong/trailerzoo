@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var coverage;
 var reporters;
@@ -56,10 +57,16 @@ module.exports = function (config) {
           },
           {
             test: /\.json$/, loader: 'json'
-          }
+          },
+          {
+            test: /\.css$/,
+            loader: ExtractTextPlugin.extract("css-loader")
+          },
         ]
       },
       plugins: [
+        new ExtractTextPlugin('[name]-[chunkhash].css'),
+
         new webpack.DefinePlugin({
           'process.env': {
             BROWSER: JSON.stringify(true),

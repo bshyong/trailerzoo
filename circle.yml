@@ -1,0 +1,7 @@
+deployment:
+  production:
+    branch: master
+    heroku:
+      appname: trailer
+    commands:
+      - node ./post-deploy.js
