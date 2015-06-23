@@ -20,10 +20,10 @@ module.exports = {
     app: './app/index.js'
   },
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.join(__dirname, 'public', 'assets'),
     filename: '[name]-[chunkhash].js',
     chunkFilename: '[name]-[chunkhash].js',
-    publicPath: '/assets/'
+    publicPath: 'assets/'
   },
   module: {
     preLoaders: [
